@@ -1,11 +1,16 @@
 import re
 
+# 3. Write a Python program that takes a text file as input and returns the number of words of a given text file.
+# 	Note: Some words can be separated by a comma with no space.
+
 def num_of_words():
     with open("matter.txt", "r") as file:
         data = file.read()
         print("Total Number of Words in File : ", re.findall(r"[\w']+", data))
 
 num_of_words()
+
+# 4. Write a Python program to remove newline characters from a file
 
 def remove_newline():
     with open("matter.txt", "r") as file:
@@ -15,6 +20,8 @@ def remove_newline():
         file.write(data)
 
 remove_newline()
+
+# 5. Write a Python program to copy the contents of a file to another file .
 
 from os import path
 
@@ -39,6 +46,8 @@ def copy_file():
 
 copy_file()
 
+# 6. Write a Python program that reads each row of a given csv file and skip the header of the file. Also print the number of rows and the field names.
+
 import csv
 
 def csv_file():
@@ -51,6 +60,12 @@ def csv_file():
 
 csv_file()
 
+# 7. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#".
+# 	Write a function definition for hash_display() in Python that would display the entire content of the file matter.txt in the desired format.
+# 	Example :
+# 	If the file matter.txt has the following content stored in it :
+# 	THE WORLD IS ROUND
+
 def insert_hash():
     with open("matter.txt","r") as file:
         data = file.read()
@@ -59,6 +74,15 @@ def insert_hash():
     print()
 
 insert_hash()
+
+# 8. Write a class to handle below exceptions
+# 	a. ZeroDivisionError
+# 	b. ImportError
+# 	c. IndexError
+# 	d. IndentationError
+# 	e. ValueError
+# 	f. Exception
+# 	g. Raise any exception and handle it properly and use else, finally blocks to print something irrespective of exception
 
 class CustomException(Exception):
     pass
