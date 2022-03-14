@@ -13,11 +13,11 @@ global regex
 
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
-class NameNotUnique(Exception):
+class DuplicateEmail(Exception):
     pass
 
 
-class NegativeAge(Exception):
+class InvalidAge(Exception):
     pass
 
 
@@ -37,21 +37,21 @@ class Student:
 
     def validate_name(self, uname):
         if uname in self.student_db:
-            raise NameNotUnique("Username Already Exists")
+            raise DuplicateEmail(f"DuplicateEmail Exception : Username Already Exists '{uname}'")
         pass
 
 
     def validate_age(self, age):
         if 16 > age > 0:
-            raise AgeNotSufficient("Age Is less than 16")
+            raise AgeNotSufficient(f"AgeNotSufficient Exception : Underage '{age}'")
         if age < 0:
-            raise NegativeAge("Age Is Less Than 0")
+            raise InvalidAge(f"InvalidAge Exception : Age Not Valid '{age}'")
 
     def validate_email(self, email, uname):
         if re.fullmatch(regex, email):
             pass
         else:
-            raise InvalidEmail("Invalid Email Found")
+            raise InvalidEmail(f"InvalidEmail Exception : Invalid Email Found '{email}'")
 
     def add_to_db(self):
         for student in self.studentList:
@@ -81,7 +81,7 @@ test_cases.append(("Student1", "Studentemail1@test.com", 20))
 
 
 
-print(test_cases)
+# print(test_cases)
 s = Student(test_cases)
 
 

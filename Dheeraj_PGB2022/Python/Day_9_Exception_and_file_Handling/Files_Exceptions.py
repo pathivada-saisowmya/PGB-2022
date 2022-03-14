@@ -6,16 +6,16 @@ import re
 def num_of_words():
     with open("matter.txt", "r") as file:
         data = file.read()
-        print("Total Number of Words in File : ", re.findall(r"[\w']+", data))
+        print("Total Number of Words in File :", len(re.findall(r"[\w']+", data)))
 
 num_of_words()
 
 # 4. Write a Python program to remove newline characters from a file
 
 def remove_newline():
-    with open("matter.txt", "r") as file:
+    with open("matter.txt", "r+") as file:
         data = file.read()
-    with open("matter.txt", "w") as file:
+        file.seek(0)
         data = data.replace('\n', ' ')
         file.write(data)
 
@@ -37,7 +37,7 @@ def copy_file():
         return copy_file()
 
     if ofile == "":
-        ofile = "( copy )" + ifile
+        ofile = "(copy)" + ifile
 
     with open(ifile, "r") as infile:
         data = infile.read()
@@ -51,11 +51,11 @@ copy_file()
 import csv
 
 def csv_file():
-    csvfile = input("Enter CSV File Name : ")
-    with open(csvfile, "rb") as f:
+    csvfile = input("Enter CSV File Name (csvfile.csv) : ")
+    with open(csvfile, "r") as f:
         reader = csv.reader(f)
         headers = next(reader)
-        print(f"Total Number of Rows : {len(reader)}")
+        print(f"Total Number of Rows : {sum(1 for line in reader)}")
         print(f"feild Names : {headers}")
 
 csv_file()
