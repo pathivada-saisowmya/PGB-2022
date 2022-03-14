@@ -13,6 +13,7 @@ public class streams {
 		
 		l.stream().filter(p->check(p) && p<25).forEach(System.out::println);
 		List<Integer> prime = l.stream().filter(p->check(p)).collect(Collectors.toList());
+		l.stream().map(number -> number).forEach(System.out::println);// used Map to print prime numbers
 		System.out.println("Printing the prime numbers in sorted order(Descending Order) ");
 		List<Integer> show =
 	            prime.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
