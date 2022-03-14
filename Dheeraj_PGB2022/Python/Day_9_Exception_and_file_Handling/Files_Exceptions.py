@@ -41,7 +41,7 @@ def copy_file():
 
     with open(ifile, "r") as infile:
         data = infile.read()
-    with open(ofile, "w") as outfile:
+    with open(ofile, "w+") as outfile:
         outfile.write(data)
 
 copy_file()
