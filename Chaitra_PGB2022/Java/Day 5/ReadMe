@@ -35,3 +35,13 @@ Walls Built: Wood
 Elements: [1, 45, 23, 7, 9, 100, 677, 43, 17, 19, 9]
 Primes less than 25 in descending order: 
 23 19 17 7 1
+
+
+
+
+4. FunctionalInterface.java
+
+Consumer: 10
+Supplier: 0.8591014983049878
+Predicate: true
+
