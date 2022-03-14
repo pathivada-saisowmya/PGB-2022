@@ -33,7 +33,27 @@ else:
     copyfile('txtdemo', 'abc.py')
     print("Yes")
 
-f1 = open("data.csv", 'r')
+
+    fields = ['Name', 'Age', 'Location']
+
+rows = [ ['Shyam','21', 'Vizag'],
+		['Vihaan', '6', 'Hyderabad'],
+		['Nikhil', '16', 'Vizag'],
+		['Bhuvana', '14', 'Purushothapuram'],
+		]
+
+with open('familyxyz.csv', 'w') as csvfile:
+
+	csvwriter = csv.writer(csvfile)
+
+	csvwriter.writerow(fields)
+		
+	csvwriter.writerows(rows)
+
+
+
+f1 = open("familyxyz.csv", 'r')
+
 
 content = f1.readlines()
 content = content[1:]
