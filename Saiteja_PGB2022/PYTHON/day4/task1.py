@@ -209,6 +209,3 @@ class ExceptionHandling:
                 print(f"{i-1} Chances Left")
 
 ExceptionHandling()
-
-
-print("hello")
