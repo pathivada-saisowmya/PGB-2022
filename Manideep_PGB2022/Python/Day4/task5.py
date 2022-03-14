@@ -4,6 +4,7 @@
 f=open('Day4/input.csv','r')
 
 data=f.readlines()
+print(data[0])
 data=data[1:]
-print(data)
+print(len(data))
 f.close()
