@@ -42,10 +42,6 @@ class calculator:
             raise FormulaError("Invalid Formula")
 
         self.operator = op_lst[0]
-        # if re.fullmatch(regex, self.operator):
-        #     pass
-        # else:
-        #     raise FormulaError("Invalid Formula")
 
 
     def calculate(self):
