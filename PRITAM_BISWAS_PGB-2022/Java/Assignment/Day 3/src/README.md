@@ -4,11 +4,20 @@ Table java class
 
 
 Input: 
+<<<<<<< HEAD
+         Select type of material for Table : 
+         1. wood 2. Metal 3.Plastic 
+=======
          Select type of material for Table : 1. wood 2. Metal 3.Plastic 
+>>>>>>> 08d0b8cef278c90f545608cc7c8daab5de79e9c6
          
          1
          
          Select 1. foldable 2.non- foldable 
+<<<<<<< HEAD
+         
+=======
+>>>>>>> 08d0b8cef278c90f545608cc7c8daab5de79e9c6
          2
         
  Output:
